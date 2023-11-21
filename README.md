@@ -14,3 +14,10 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Mobx necessita do comando pra reconhecer o part:
+
+em dev_dependecies
+    : ^2.3.3
+
+flutter packages pub run build_runner build

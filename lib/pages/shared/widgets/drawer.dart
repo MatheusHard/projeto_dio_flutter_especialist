@@ -82,6 +82,23 @@ class _DrawerCustomState extends State<DrawerCustom> {
             child: InkWell(
               onTap: (){
                 Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> ListaDeTarefasProvider()));
+              },
+              child: Row(
+                children:  const[
+                  Icon(Icons.person),
+                  SizedBox(width: 20),
+                  Text("Tarefas Mobx"),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+              onTap: (){
+                Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> ListaDeTarefasProvider()));              },
               child: Row(
                       children:  const[

@@ -3,14 +3,14 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../model/tarefa_model.dart';
+import '../../model/tarefa_model_provider.dart';
 import '../repository/tarefa_repository.dart';
 
 class ListaDeTarefasProvider extends StatelessWidget {
    ListaDeTarefasProvider({super.key});
 
   TarefaRepository tarefaRepository = TarefaRepository();
-  var _tarefas = const <TarefaModel>[];
+  var _tarefas = const <TarefaModelProvider>[];
   var descricaoContoller = TextEditingController();
   var apenasNaoConcluidos = false;
 
@@ -43,7 +43,7 @@ class ListaDeTarefasProvider extends StatelessWidget {
                              Provider.of<TarefaRepository>(
                                  context,
                                  listen: false,                            
-                             ).adicionar(TarefaModel(id, false,descricaoContoller.text));
+                             ).adicionar(TarefaModelProvider(id, false,descricaoContoller.text));
                              Navigator.pop(context);
                           //   obterTarefas();
                            //  setState(() {});
@@ -106,7 +106,7 @@ class ListaDeTarefasProvider extends StatelessWidget {
                                    Provider.of<TarefaRepository>
                                      (context,
                                      listen: false
-                                     ).alterar(TarefaModel(tarefa.id, tarefa.concluido, tarefa.descricao));
+                                     ).alterar(TarefaModelProvider(tarefa.id, tarefa.concluido, tarefa.descricao));
                                  },
                                  value: tarefa.concluido,
                                ),
