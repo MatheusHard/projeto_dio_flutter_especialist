@@ -18,5 +18,10 @@ abstract class _TarefaStore with Store{
 
   _TarefaStore(this.descricao, this.concluido);
 
+  @action
+  alterar(String tDescricao, bool tConcluido){
+    descricao = tDescricao;
+    concluido = tConcluido;
+  }
 
 }

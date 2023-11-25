@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../../provider/lista_tarefas_provider.dart';
+import '../../mobx/lista_de_tarefas_mobx_page.dart';
+import '../../provider/lista_tarefas_provider_page.dart';
 
 
 class DrawerCustom extends StatefulWidget {
@@ -82,7 +83,7 @@ class _DrawerCustomState extends State<DrawerCustom> {
             child: InkWell(
               onTap: (){
                 Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> ListaDeTarefasProvider()));
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> ListaDeTarefasMobxPage()));
               },
               child: Row(
                 children:  const[

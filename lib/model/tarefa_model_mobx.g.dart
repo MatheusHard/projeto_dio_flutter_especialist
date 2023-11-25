@@ -41,6 +41,20 @@ mixin _$TarefaStore on _TarefaStore, Store {
     });
   }
 
+  late final _$_TarefaStoreActionController =
+      ActionController(name: '_TarefaStore', context: context);
+
+  @override
+  dynamic alterar(String tDescricao, bool tConcluido) {
+    final _$actionInfo = _$_TarefaStoreActionController.startAction(
+        name: '_TarefaStore.alterar');
+    try {
+      return super.alterar(tDescricao, tConcluido);
+    } finally {
+      _$_TarefaStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
