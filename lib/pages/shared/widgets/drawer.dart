@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:projeto_dio_flutter_especialist/pages/getx/lista_de_tarefas_getx_page.dart';
 
 import '../../mobx/lista_de_tarefas_mobx_page.dart';
 import '../../provider/lista_tarefas_provider_page.dart';
@@ -90,6 +91,23 @@ class _DrawerCustomState extends State<DrawerCustom> {
                   Icon(Icons.person),
                   SizedBox(width: 20),
                   Text("Tarefas Mobx"),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+              onTap: (){
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> ListaDeTarefasGetxPage()));
+              },
+              child: Row(
+                children:  const[
+                  Icon(Icons.person),
+                  SizedBox(width: 20),
+                  Text("Tarefas GetX"),
                 ],
               ),
             ),

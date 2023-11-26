@@ -15,7 +15,7 @@ class ListaDeTarefasMobxPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Tarefas Provider"),),
+        appBar: AppBar(title: const Text("Tarefas MobX"),),
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
           onPressed: () {
