@@ -4,8 +4,8 @@ import 'package:projeto_dio_flutter_especialist/model/tarefa_model.dart';
 class ListaTarefasController extends GetxController {
 
 
-  var _apenasconcluidos = false.obs;
-  RxList<TarefaModel> _tarefas = <TarefaModel>[].obs;
+  final _apenasconcluidos = false.obs;
+  final RxList<TarefaModel> _tarefas = <TarefaModel>[].obs;
 
 
   List<TarefaModel> get tarefas => _apenasconcluidos.value
